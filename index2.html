@@ -6,13 +6,70 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="js/jquery.min.js"></script>
     <title>Preview images</title>
+    
 </head>
 <body>
-     <h2>Preview images</h2>
-     <input type="file" name="" id="fileload">
-     <img src="#" id="blah" alt="">
+    <style>
      
+      body{
+        
+         background-color: #001935;
+         }
 
+       h3{
+        color: hsla(0, 0%, 100%, 0.6);
+        text-align: center;
+       }
+        .main{
+          text-align: center;
+        }
+        img{
+            max-width: 120px;
+            border-radius:6px;
+        } 
+        .filePrev{
+            background: rgba(0,0,0,.3);
+	        border: 1px solid rgba(0,0,0,.5);
+            text-align: center;
+	        border-radius: 3px;
+	        margin: 0 auto 15px;
+            margin-top: 20px;
+	        padding: 10px;
+	        width: 30%;
+        }
+        .footer {
+           position: fixed;
+           bottom: 0px;
+           width: 100%;
+           overflow: visible;
+           z-index: 99;
+           clear: both;
+           background-color: rgba(0, 0, 0, 0.6);
+           filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#99000000',endColorstr='#99000000');
+          }
+          span{
+            
+            color: #fff;
+            font-size: 12px;
+            line-height: 30px;
+            float:right;
+            margin-right:40px;
+          }
+    </style>
+
+          <br><br><br>
+          <h3>Preview images</h3>
+
+          <div class="main">
+              <input type="file" name="" id="fileload">
+          </div>
+
+          <div class="filePrev">
+              <img src="#" id="blah" alt="">
+          </div>
+          
+       
+         <div class="footer"> <a href="https://boukernineabdellatif.netlify.com" target="_blank" rel="noopener noreferrer"><span>by Boukernine abdellatif</span></a> </div>
      <script>
         function readUrl(input){
 
