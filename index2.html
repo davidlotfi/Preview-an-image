@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/jquery.min.js"></script>
+    <title>Preview images</title>
+</head>
+<body>
+     <h2>Preview images</h2>
+     <input type="file" name="" id="fileload">
+     <img src="#" id="blah" alt="">
+     
+
+     <script>
+        function readUrl(input){
+
+         if (input.files && input.files[0]) {
+             var reader = new FileReader();
+             reader.onload = function(e){
+                 $('#blah').attr('src',e.target.result);
+             }
+             reader.readAsDataURL(input.files[0]);
+             
+         }
+        }
+        
+        $("#fileload").change(function(){
+           readUrl(this);
+        });
+     </script>
+</body>
+</html>
